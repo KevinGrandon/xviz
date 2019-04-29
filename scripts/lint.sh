@@ -45,6 +45,7 @@ case $MODE in
 
     JS_PATTERN="{modules,test,website,examples}/**/*.js"
     DOCS_PATTERN="docs/**/*.md"
+    DEV_DOCS_PATTERN="dev-docs/*.md"
     README_PATTERN="*.md"
     SCHEMA_README="./modules/schema/README.md"
 
@@ -52,6 +53,7 @@ case $MODE in
         || echo "Running prettier." && npx prettier --loglevel warn --write \
                                            "$JS_PATTERN" \
                                            "$DOCS_PATTERN" \
+                                           "$DEV_DOCS_PATTERN" \
                                            "$README_PATTERN" \
                                            "$SCHEMA_README"
 
